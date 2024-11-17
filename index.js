@@ -58,8 +58,7 @@ bot.on('text', (ctx) => {
         const absDaysUntil = Math.abs(daysUntil);
         if (absDaysUntil === 0) {
             ctx.reply(`Это сегодняшняя дата`)
-        }
-        else if (today.isBefore(validUserDate)) {
+        } else if (today.isBefore(validUserDate)) {
             ctx.reply(`До этой даты ${plural(absDaysUntil, 'остался', 'осталось')} ${absDaysUntil} ${plural(absDaysUntil, 'день', 'дня', 'дней')}`)
         } else if (today.isAfter(validUserDate)) {
             ctx.reply(`С этой даты ${plural(absDaysUntil, 'прошёл', 'прошло')} ${absDaysUntil} ${plural(absDaysUntil, 'день', 'дня', 'дней')}`)
